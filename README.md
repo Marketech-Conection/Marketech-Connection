@@ -1,6 +1,10 @@
 <h1 align="center">
     👋 Olá Mundo! Somos a Equipe da Marketech Connection
+    <br>
+    <br>
     <img src="https://cdn.discordapp.com/attachments/810626762198876180/821531267769172048/4875921119_a1285f53-460b-4f4e-ad24-42ee6175258e.png" > 
+    <br>
+    <br>
 </h1>
   
    <p align="center"> Então, somos estudantes do 5º semestre do curso de BCC (Bacharelado em Ciência da Computação) do Centro Universitário do Estado do Pará (Cesupa). Durante o nosso percurso na universidade realizamos diversas atividades e uma delas é o Projeto Integrado cujo o tema do ano de 2021 é o Varejo 5.0, dentro desta temática podemos fazer o seguinte questionamento, o que é varejo? Varejo representa todas as atividades que englobam o processo de venda de produtos e serviços para atender uma necessidade pessoal do consumidor final. (PARENTE, 2000).
