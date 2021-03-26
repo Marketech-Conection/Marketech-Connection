@@ -12,5 +12,5 @@
    Com a abordagem dessa temática e a necessidade de integrar disciplinas e fazer com que alunos tenham uma experiência diferenciada e apliquem conhecimentos adquiridos surge o projeto integrado de 2021. 
 <p/>
    
-   NOSSO PROJETO:
+ 
    
