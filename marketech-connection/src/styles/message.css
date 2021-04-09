@@ -1,0 +1,12 @@
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome h1{
+    color: #FAC018;
+    text-shadow: 0px 3px 6px #043832;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
