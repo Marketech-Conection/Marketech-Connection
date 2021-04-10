@@ -11,14 +11,14 @@ function Header(){
                     <h5>Connection</h5>
                 </a>
             </div>
-            <div className="input">
-                <input type="search" placeholder="Pesquise o que quiser"/>
-            </div>
             <nav className="nav-bar">
                 <ul>
-                    <li><a href="/"><FaListAlt/>Lista de produtos</a></li>
-                    <li><a href="/"><FaUser/>Perfil</a></li>
-                    <li><a href="/"><FaShoppingCart/>Carrinho</a></li>
+                    <div className="input">
+                        <input type="search" placeholder="Pesquise o que quiser"/>
+                    </div>
+                    <li><a href="/"><FaListAlt/></a></li>
+                    <li><a href="/"><FaUser/></a></li>
+                    <li><a href="/"><FaShoppingCart/></a></li>
                 </ul>
         </nav>
         </header>
