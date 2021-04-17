@@ -1,0 +1,23 @@
+.footer-container{
+    background: #707070;
+    padding: 32px 0;
+}
+.footer-container h3{
+    font-size: 24px;
+    text-align: center;
+}
+.footer-container p{
+    font-size: 18px;
+    text-align: center;
+}
+@media (min-width: 1080px){
+    .footer-container{
+        position:absolute;
+        bottom:0;
+        width:100%;
+    }
+    .footer-container h3, .footer-container p{
+        padding-left: 32px;
+        text-align: left;
+    }
+}
