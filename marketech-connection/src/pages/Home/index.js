@@ -1,16 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { FaProductHunt,FaServicestack } from 'react-icons/fa'
-import '../../styles/contentBar.css'
+import Message from '../../Components/Message/message'
+import './contentBar.css'
 export default function ContentBar(){
     return(
-        <div className="container">
+        <div className="container" >
+            <Message/>
             <section className="categories">
                 <h4>Categorias</h4>
                 <p>
-                    <a href="/">Produtos <FaProductHunt size={25}/></a>
+                    <Link href="/">Produtos <FaProductHunt size={25}/></Link>
                 </p>
                 <p>
-                    <a href="/">Serviços <FaServicestack size={25}/></a>
+                    <Link href="/">Serviços <FaServicestack size={25}/></Link>
                 </p>
             </section>
             <section className="integrated-stores">
