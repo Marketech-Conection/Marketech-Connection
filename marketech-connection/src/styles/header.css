@@ -43,6 +43,7 @@
     border-radius: 8px;
     padding-left: 8px;
     max-width: 200px;
+    margin-right: 10px;
 }
 .nav-bar a{
     text-decoration: none;
@@ -51,6 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    font-size: 32px;
 }
 @media (min-width: 1080px){
     .nav-bar li{
@@ -75,7 +77,7 @@
         width: 100%;
     }
     .nav-bar a{
-        font-size: 32px;
+        font-size: 26px;
     }
 
 }
