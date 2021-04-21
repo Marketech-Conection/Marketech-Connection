@@ -19,7 +19,7 @@ function Header(){
                     </div>
                     <li><Link href="/"><FaListAlt/></Link></li>
                     <li><Link href="/"><FaUser/></Link></li>
-                    <li><Link href="/"><FaShoppingCart/></Link></li>
+                    <li><Link to={`/Carrinho`}><FaShoppingCart/></Link></li>
                 </ul>
         </nav>
         </header>
