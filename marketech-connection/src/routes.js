@@ -3,6 +3,7 @@ import Header from './Components/Header/header'
 import Footer from './Components/Footer'
 import Home from './pages/Home'
 import Lojas from './pages/Lojas'
+import shoppingCart from './pages/shoppingCart'
 
 const Routes = () => {
     return(
@@ -11,6 +12,7 @@ const Routes = () => {
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/lojas" component={Lojas}/>
+                <Route exact path="/carrinho" component={shoppingCart} />
             </Switch>
             <Footer/>
         </BrowserRouter>

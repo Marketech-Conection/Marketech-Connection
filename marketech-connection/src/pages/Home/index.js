@@ -19,8 +19,8 @@ export default function ContentBar(){
                 <h4>Categorias</h4>
                 <Link to={`/lojas`}>
                 <p>
-                Produtos
-                <FaProductHunt size={25}/>
+                    Produtos
+                    <FaProductHunt size={25}/>
                 </p>
                 </Link>
                 <Link href="/">
