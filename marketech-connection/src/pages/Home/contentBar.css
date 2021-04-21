@@ -1,10 +1,6 @@
 body{
-    background-image: url(../../assets/LogoBackground.png);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-attachment: fixed;
+    background-color: #f2f3f5;
+    
 }
 .container{
     display: flex;
@@ -14,6 +10,11 @@ body{
     text-align: center;
     padding: 18px;
     width: 100%;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 200px;
 }
 .categories h4{
     color: white;
@@ -32,6 +33,11 @@ body{
     padding: 28px 0;
     font-size: 24px;
     cursor: pointer;
+    opacity: 0.8;
+    transition: 0.5s all;
+}
+.categories p:hover{
+    opacity: 1;
 }
 .categories a{
     text-decoration: none;
@@ -42,10 +48,32 @@ body{
     align-items: center;
     justify-content: center;
 }
-.integrated-stores, .hot-products, .hot-services{
+.integrated-stores, .hot-products{
     color: #FAC018;
     text-shadow: 0px 3px 6px #043832;
     font-weight: 600;
     font-size: 24px;
     text-align: center;
+}
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.product-image{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+.price{
+    color: black;
+    text-shadow: none;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: white;
+    border-radius: 2px;
+    width: 120px;
+    margin-bottom: 20px;
 }
