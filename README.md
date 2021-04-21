@@ -25,7 +25,7 @@ Nosso objetivo é desenvolver um market place para os associados da aje pará ( 
    
 ## Integrantes
 * Marcelo Calandrini Chaves (Marcelochaves20000@gmail.com) @MarceloCChaves
-* Marcelo Saldanha Lima Filho () @Marcelofilho97
+* Marcelo Saldanha Lima Filho (marcelofilho.2897@gmail.com) @Marcelofilho97
 * Marcos Aguiar Parente (marcos.parente.dev@gmail.com) @MarcosAP20
 * Matheus Lopes da Silva (Matheuslopesteco@gmail.com) @BatheusPA
 * Otávio Araújo da silva (otavioaraujo490@gmail.com) @Otávioaraujo08
