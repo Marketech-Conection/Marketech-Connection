@@ -3,6 +3,7 @@ import './styles.css'
 import logoPaladarAmazonico from '../../assets/paladaramazopnico.png'
 import logoAje from '../../assets/logoAje.png'
 import logoLibertyStore from '../../assets/logoLibertyStore.jpg'
+import { Link } from 'react-router-dom'
 
 export default function Lojas(){
     return(
@@ -17,7 +18,9 @@ export default function Lojas(){
                         <p>
                         Indústria focada na produção e comercialização  de iguarias da região amazônica.
                         </p>
-                        <button>Saiba mais</button>
+                        <Link to="/lojas/produtos">
+                            <button>Saiba mais</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="container-store">
@@ -28,7 +31,9 @@ export default function Lojas(){
                     <p>
                     Loja online voltada para o universo das T-shirts.
                     </p>
-                    <button>Saiba mais</button>
+                    <Link to="/lojas/produtos">
+                        <button>Saiba mais</button>
+                    </Link>
                 </div>
                 </div>
             </div>

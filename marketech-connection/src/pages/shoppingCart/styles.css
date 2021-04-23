@@ -19,6 +19,7 @@
     grid-template-columns: repeat(4, 1fr);
     width: 80%;
     border: 2px solid white;
+    background: #fff;
     border-radius: 8px;
     padding: 32px 18px;
     text-align: center;
@@ -32,6 +33,12 @@
     width: 50px;
     text-align: center;
     margin-top: 18px;
+}
+.product-image, .product-name, .product-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .product-image img{
     width: 100px;

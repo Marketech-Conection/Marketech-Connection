@@ -12,6 +12,8 @@
 }
 @media (min-width: 1080px){
     .footer-container{
+        position: absolute;
+        bottom: 0;
         width:100%;
     }
     .footer-container h3, .footer-container p{
