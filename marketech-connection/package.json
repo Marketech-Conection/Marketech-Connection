@@ -9,6 +9,7 @@
     "feather-icons": "^4.28.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-external-link": "^1.2.1",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
