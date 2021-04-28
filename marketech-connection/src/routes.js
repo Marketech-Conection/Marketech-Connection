@@ -1,6 +1,5 @@
 import { BrowserRouter,Switch, Route } from 'react-router-dom'
 import Header from './Components/Header/header'
-import Footer from './Components/Footer'
 import Home from './pages/Home'
 import Lojas from './pages/Lojas'
 import shoppingCart from './pages/shoppingCart'
@@ -20,7 +19,6 @@ const Routes = () => {
                 <Route exact path="/lojas/produtos" component={Produtos}/>
                 <Route exact path="/serviços/serviçosDaPagina" component={ServicosWeb}/>
             </Switch>
-            <Footer/>
         </BrowserRouter>
     )
 }
