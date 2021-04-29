@@ -16,7 +16,7 @@ Nosso objetivo é desenvolver um market place para os associados da aje pará ( 
     * ReactJS + redux
 ## Backend:
     * Nodejs com express
-    * Mongodb
+    * Banco de dados PostgreSQL
 
 ## Artefatos
     * Trello https://trello.com/b/lhYihB4q/marketech-conection
