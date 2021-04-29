@@ -4,6 +4,7 @@ import geleiaAcai from '../../assets/products/geleiaacai.jpg'
 import geleiaCupuacu from '../../assets/products/geleiacupuacu.jpg'
 import { FaInstagram } from 'react-icons/fa'
 import { ExternalLink } from 'react-external-link'
+import { Link } from 'react-router-dom'
 import './styles.css'
 export default function products(){
     return(
@@ -34,7 +35,9 @@ export default function products(){
                             <p>
                             Preco: R$ 16,00
                             </p>
+                            <Link to="/lojas/produtos/produto">
                             <button>Visualizar</button>
+                            </Link>
                         </div>
                     </div>
                     <div className="content-associated">
@@ -48,7 +51,9 @@ export default function products(){
                             <p>
                             Preco: R$ 18,00
                             </p>
+                            <Link>
                             <button>Visualizar</button>
+                            </Link>
                         </div>
                     </div>
                     

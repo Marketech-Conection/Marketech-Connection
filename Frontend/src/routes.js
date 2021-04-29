@@ -3,8 +3,9 @@ import Header from './Components/Header/header'
 import Home from './pages/Home'
 import Lojas from './pages/Lojas'
 import shoppingCart from './pages/shoppingCart'
-import Servicos from './pages/Serviços'
 import Produtos from './pages/products'
+import Produto from './pages/product'
+import Servicos from './pages/Serviços'
 import ServicosWeb from './pages/serviçosDaPagina'
 
 const Routes = () => {
@@ -16,8 +17,9 @@ const Routes = () => {
                 <Route exact path="/lojas" component={Lojas}/>
                 <Route exact path="/carrinho" component={shoppingCart} />
                 <Route exact path="/serviços" component={Servicos} />
-                <Route exact path="/lojas/produtos" component={Produtos}/>
                 <Route exact path="/serviços/serviçosDaPagina" component={ServicosWeb}/>
+                <Route exact path="/lojas/produtos" component={Produtos}/>
+                <Route exact path="/lojas/produtos/produto" component={Produto}/>
             </Switch>
         </BrowserRouter>
     )
