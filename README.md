@@ -15,7 +15,6 @@ Nosso objetivo é desenvolver um market place para os associados da aje pará ( 
 ### Frontend:
     * ReactJS + redux
 ## Backend:
-    * Firebase
     * Nodejs com express
     * Mongodb
 
