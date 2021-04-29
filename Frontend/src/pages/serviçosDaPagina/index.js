@@ -1,8 +1,6 @@
 import React from 'react'
 import logoZeroDano from '../../assets/logoZeroDano.png'
-import gestaoSST from '../../assets/serv/2.png'
-import Ppra from '../../assets/serv/3.png'
-import { FaInstagram } from 'react-icons/fa'
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { ExternalLink } from 'react-external-link'
 import './styles.css'
 export default function products(){
@@ -20,38 +18,28 @@ export default function products(){
             </div>
             <div className="products-content">
                 <div className="products-title">
-                    <h3>Serviços em destaque</h3>
+                    <h3>Lista de serviços disponíveis</h3>
+                    <ExternalLink href="https://drive.google.com/file/d/1MMXwt-nnAcFxOhwY9McDBLuJpPPcqAYk/view?usp=sharing"> 
+                    <button>Ver portfólio</button>
+                    </ExternalLink>
                 </div>
-                <div className="product-stock">
-                    <div className="content-associated">
-                        <div className="product-logo">
-                            <img className="logo-associated" src={gestaoSST} alt="geleia acai"/>
-                        </div>
-                        <div className="description">
-                            <p>
-                            Gestão de SST
-                            </p>
-                            <p>
-                            SSMA de sua empresa em boas mãos
-                            </p>
-                            <button>Visualizar</button>
-                        </div>
-                    </div>
-                    <div className="content-associated">
-                        <div className="product-logo">
-                            <img className="logo-associated" src={Ppra} alt="geleia cupuaçu"/>
-                        </div>
-                        <div className="description">
-                            <p>
-                            PPRA
-                            </p>
-                            <p>
-                            Elaboração de Programa de Prevenção de Riscos Ambientais
-                            </p>
-                            <button>Visualizar</button>
-                        </div>
-                    </div>
-                    
+                <div className="content-list">
+                    <ul>
+                        <li>
+                        PPRA - Elaboração de Programa de Prevenção de Riscos Ambientais
+                        <button>
+                            <FaWhatsapp size={20}/>
+                            Entrar em contato via Whatsapp
+                        </button>
+                        </li>
+                        <li>
+                        PPRA - Elaboração de Programa de Prevenção de Riscos Ambientais
+                        <button>
+                            <FaWhatsapp size={20}/>
+                            Entrar em contato via Whatsapp
+                        </button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
