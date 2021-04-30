@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logoZeroDano from '../../assets/logoZeroDano.png'
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram, FaPlus, FaMinus } from 'react-icons/fa'
 import { ExternalLink } from 'react-external-link'
 import './styles.css'
-export default function products(){
+export default function Products(){
+
+    const [clicked, setClicked] = useState(false);
+
+    const toggle = index => {
+        if(clicked === index){
+            return setClicked(null);
+        }
+        setClicked(index);
+    }
+
     return(
         <div className="products-container">
             <div className="logo-content">
@@ -15,6 +25,19 @@ export default function products(){
                         <p>Zero Dano Assessoria, Consultoria e Projetos</p>
                     </ExternalLink>
                 </div>
+                 <div className="accordion-section">
+                    <div className="container">
+                        <div className="wrap" onClick={ (index) => toggle(index)}>
+                            <h1>Contato</h1>
+                            <span>{clicked ? <FaMinus/> : <FaPlus/>}</span>
+                        </div>
+                        {clicked ? (
+                            <div className="dropdown">
+                            <p>(91)99862-9912</p>
+                            </div>
+                        ) : null}
+                    </div>
+                </div>
             </div>
             <div className="products-content">
                 <div className="products-title">
@@ -23,23 +46,18 @@ export default function products(){
                     <button>Ver portfólio</button>
                     </ExternalLink>
                 </div>
-                <div className="content-list">
-                    <ul>
-                        <li>
-                        PPRA - Elaboração de Programa de Prevenção de Riscos Ambientais
-                        <button>
-                            <FaWhatsapp size={20}/>
-                            Entrar em contato via Whatsapp
-                        </button>
-                        </li>
-                        <li>
-                        PPRA - Elaboração de Programa de Prevenção de Riscos Ambientais
-                        <button>
-                            <FaWhatsapp size={20}/>
-                            Entrar em contato via Whatsapp
-                        </button>
-                        </li>
-                    </ul>
+                <div className="accordion-section">
+                    <div className="container">
+                        <div className="wrap" onClick={ (index) => toggle(index)}>
+                            <h1>Lista de serviços</h1>
+                            <span>{clicked ? <FaMinus/> : <FaPlus/>}</span>
+                        </div>
+                        {clicked ? (
+                            <div className="dropdown">
+                            <p>(91)99862-9912</p>
+                            </div>
+                        ) : null}
+                    </div>
                 </div>
             </div>
         </div>
