@@ -19,6 +19,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 32px;
 }
 .logo-associated{
     width: 300px;
@@ -31,16 +32,20 @@ body{
 }
 .description{
     width: 300px;
-    height: 150px;
+    height: 250px;
     background: #FAC018;
     padding: 18px 0;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 .description p{
+    width: 100%;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
+}
+.description img{
+    width: 200px;
 }
 .description button{
     margin-top: 18px;
