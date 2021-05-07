@@ -1,12 +1,38 @@
-import React, {useState} from 'react'
-import logoZeroDano from '../../assets/logoZeroDano.png'
+import React, {useState, useEffect} from 'react'
+import api from '../../services/api'
 import { FaInstagram, FaPlus, FaMinus } from 'react-icons/fa'
 import { ExternalLink } from 'react-external-link'
 import './styles.css'
+import { useHistory, useParams } from 'react-router'
 export default function Products(){
 
     const [clickedContacts, setClickedContacts] = useState(false);
     const [clickedServices, setClickedServices] = useState(false);
+    const { id } = useParams();
+    const [ associadosServicos, setAssociadosServicos ] = useState([]);
+    const [ servico, setServico ] = useState([]);
+    const history = useHistory();
+
+    useEffect( () => {
+        
+        async function loadService(){
+            const response = await api.get(`api/shop/${id}`);
+            if(response.data.length === 0){
+                history.replace('/');
+                return;
+            }
+            setAssociadosServicos(response.data);
+        }
+        loadService();
+    }, [id, history]);
+
+    useEffect(() => {
+        async function loadServices(){
+            const response = await api.get(`api/service/${id}`)
+            setServico(response.data);
+        }
+        loadServices();
+    }, [id])
 
     const toggleContacts = index => {
         if(clickedContacts === index){
@@ -25,7 +51,8 @@ export default function Products(){
         <div className="products-container">
             <div className="logo-content">
                 <h1>Bem vindo a(ao)</h1>
-                <img style={{padding: "32px 0"}} src={logoZeroDano} alt="Logo"/>
+                {console.log(associadosServicos)}
+                <img style={{padding: "32px 0"}} src={associadosServicos.image} alt={associadosServicos.name}/>
                 
                  <div className="accordion-section">
                     <div className="container">

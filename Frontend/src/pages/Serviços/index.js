@@ -28,7 +28,7 @@ export default function Servicos(){
                             <p>
                             {index.name}
                             </p>
-                            <Link to={`/api/service/${index.id}`}>
+                            <Link to={`/serviços/${index.id}`}>
                                 <button>Visualizar</button>
                             </Link>
                         </div>
