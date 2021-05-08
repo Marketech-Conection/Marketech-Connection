@@ -9,6 +9,7 @@ export default function Products() {
   const [produto, setProduto] = useState([]);
   const history = useHistory();
   const [associadosProdutos, setAssociadosProdutos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadProducts() {
@@ -19,6 +20,9 @@ export default function Products() {
         return;
       }
       setProduto(response.data);
+      const finishedTimeout = setTimeout(() => {
+        setLoading(false);
+    }, 500)
     }
     loadProducts();
   }, [history, id]);
@@ -29,6 +33,13 @@ export default function Products() {
     }
     loadAssociadosProdutos();
   }, [id]);
+  if(loading){
+    return(
+        <div id="loading">
+            {loading}
+        </div>
+    )
+}
   return (
     <div className="products-container">
       <div className="logo-content">
@@ -67,20 +78,20 @@ export default function Products() {
           <h3>Produtos disponíveis</h3>
         </div>
         <div className="product-stock">
-          {produto.map((index) => {
+          {produto.map((product, index) => {
             return (
               <div className="content-associated">
                 <div className="product-logo">
                   <img
                     className="logo-associated"
-                    src={index.image}
-                    alt={index.name}
+                    src={product.image}
+                    alt={product.name}
                   />
                 </div>
                 <div className="description">
-                  <p>{index.name}</p>
-                  <p>Preco: {index.price} reais</p>
-                  <Link to="/lojas/produtos/produto">
+                  <p>{product.name}</p>
+                  <p>Preco: {product.price} reais</p>
+                  <Link to={`${id}/${index}`}>
                     <button>Visualizar</button>
                   </Link>
                 </div>

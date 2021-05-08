@@ -6,16 +6,27 @@ import api from '../../services/api'
 
 export default function Lojas(){
     const [associadosProdutos, setAssociadosProdutos] = useState([]);
+    const [loading, setLoading] = useState(true);
 
      useEffect(() => {
         async function loadAssociadosProdutos(){
             //https://api-marketech-connection.herokuapp.com/api/shop
             const response = await api.get('api/shop/product');
             setAssociadosProdutos(response.data)
+            const finishedTimeout = setTimeout(() => {
+                setLoading(false);
+            }, 1000)
         }   
 
         loadAssociadosProdutos();
     }, []);
+    if(loading){
+        return(
+            <div id="loading">
+                {loading}
+            </div>
+        )
+    }
 
     return(
         <div className="container-store">
