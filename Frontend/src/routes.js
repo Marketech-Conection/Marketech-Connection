@@ -4,9 +4,10 @@ import Home from './pages/Home'
 import Lojas from './pages/Lojas'
 import shoppingCart from './pages/shoppingCart'
 import Produtos from './pages/products'
-import Produto from './pages/product'
+import Produto from './pages/Product'
 import Servicos from './pages/Serviços'
 import ServicosWeb from './pages/serviçosDaPagina'
+import Erro from './pages/Erro'
 
 const Routes = () => {
     return(
@@ -19,7 +20,8 @@ const Routes = () => {
                 <Route exact path="/serviços" component={Servicos} />
                 <Route exact path="/serviços/:id" component={ServicosWeb}/>
                 <Route exact path="/lojas/:id" component={Produtos}/>
-                <Route exact path="/lojas/produtos/produto" component={Produto}/>
+                <Route exact path="/lojas/:idShop/:idProduct" component={Produto}/>
+                <Route path="*" component={Erro}/>
             </Switch>
         </BrowserRouter>
     )

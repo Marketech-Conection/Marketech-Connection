@@ -9,6 +9,7 @@ export default function Products() {
   const [associadosServicos, setAssociadosServicos] = useState([]);
   const [servico, setServico] = useState([]);
   const history = useHistory();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadService() {
@@ -18,6 +19,9 @@ export default function Products() {
         return;
       }
       setAssociadosServicos(response.data);
+      const finishedTimeout = setTimeout(() => {
+        setLoading(false);
+    }, 500)
     }
     loadService();
   }, [id, history]);
@@ -29,7 +33,13 @@ export default function Products() {
     }
     loadServices();
   }, [id]);
-
+  if(loading){
+    return(
+        <div id="loading">
+            {loading}
+        </div>
+    )
+}
   return (
     <div className="service-container">
       <div className="logo-content">

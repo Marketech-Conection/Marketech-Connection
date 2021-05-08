@@ -6,14 +6,25 @@ import api from '../../services/api'
 
 export default function Servicos(){
     const [servicos, setServicos] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function loadServices(){
             const response = await api.get('api/shop/service');
             setServicos(response.data);
+            const finishedTimeout = setTimeout(() => {
+                setLoading(false);
+            }, 500)
         }
         loadServices();
     }, [])
+    if(loading){
+        return(
+            <div id="loading">
+                {loading}
+            </div>
+        )
+    }
     return(
         <div className="container-store">
             <img src={logoAje} alt="logo-aje"/>

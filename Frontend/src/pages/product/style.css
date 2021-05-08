@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     width: 400px;
-    height: 400px;
+    height: 350px;
     margin: 32px 64px;
     background-color: #fff;
 }
@@ -31,6 +31,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 80%;
 }
 .product-description h4{
     font-size: 24px;
@@ -53,4 +54,22 @@
 }
 .product-description button:hover{
     filter: brightness(0.9);
+}
+#loading{
+    width: 100px;
+    height: 100px;
+    border: 10px solid;
+    border-radius: 50%;
+    border-top-color: transparent;
+    margin: 0 auto;
+    color: #FAC018;
+    animation: load .6s linear infinite;
+    margin-top: 200px;
+    
+}
+
+@keyframes load{
+    to{
+        transform: rotate(360deg);
+    }
 }

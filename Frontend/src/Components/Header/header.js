@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/header.css'
-import { FaUser, FaListAlt, FaShoppingCart } from 'react-icons/fa'
+import { FaUser, FaHeart, FaShoppingCart } from 'react-icons/fa'
 
 function Header(){
     return(
@@ -17,7 +17,7 @@ function Header(){
                     <div className="input">
                         <input type="search" placeholder="Pesquise o que quiser"/>
                     </div>
-                    <li><Link href="/"><FaListAlt/></Link></li>
+                    <li><Link href="/"><FaHeart/></Link></li>
                     <li><Link href="/"><FaUser/></Link></li>
                     <li><Link to={`/Carrinho`}><FaShoppingCart/></Link></li>
                 </ul>
