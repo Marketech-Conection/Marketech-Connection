@@ -8,6 +8,7 @@ import Produto from './pages/Product'
 import Servicos from './pages/Serviços'
 import ServicosWeb from './pages/serviçosDaPagina'
 import Erro from './pages/Erro'
+import Salvos from './pages/Salvos'
 
 const Routes = () => {
     return(
@@ -21,6 +22,7 @@ const Routes = () => {
                 <Route exact path="/serviços/:id" component={ServicosWeb}/>
                 <Route exact path="/lojas/:id" component={Produtos}/>
                 <Route exact path="/lojas/:idShop/:idProduct" component={Produto}/>
+                <Route exact path="/salvos" component={Salvos}/>
                 <Route path="*" component={Erro}/>
             </Switch>
         </BrowserRouter>

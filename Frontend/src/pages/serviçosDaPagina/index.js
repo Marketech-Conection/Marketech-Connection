@@ -19,7 +19,7 @@ export default function Products() {
         return;
       }
       setAssociadosServicos(response.data);
-      const finishedTimeout = setTimeout(() => {
+      setTimeout(() => {
         setLoading(false);
     }, 500)
     }
