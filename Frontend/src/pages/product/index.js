@@ -2,22 +2,41 @@ import React, { useState, useEffect } from 'react'
 import './style.css'
 import api from '../../services/api'
 import { useParams } from 'react-router-dom'
+import { FaHeart } from 'react-icons/fa'
+import { toast } from 'react-toastify';
 
 export default function Product(){
     const { idProduct, idShop } = useParams();
-    const [product, setProduct] = useState([]);
+    const [arrProduct, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect( () => {
         async function loadProduct(){
             const response = await api.get(`api/product/${idShop}`);
             setProduct(response.data);
-            const finishedTimeout = setTimeout(() => {
+            setTimeout(() => {
                 setLoading(false);
             }, 500)
         }
         loadProduct();
     }, [idShop, idProduct])
+
+    function salvaProduto(){
+        const myList = localStorage.getItem('produtos');
+
+        let savedProducts = JSON.parse(myList) || [];
+
+        const hasProduct = savedProducts.some( (pd, index) => pd.id === arrProduct[idProduct].id )
+        console.log(hasProduct)
+        if(hasProduct){
+            toast.info("Você já possui esse produto salvo")
+            return;
+        }
+        savedProducts.push(arrProduct[idProduct]);
+        localStorage.setItem('produtos', JSON.stringify(savedProducts));
+        toast.success("Produto adicionado a lista de desejos")
+    }
+
     if(loading){
         return(
             <div id="loading">
@@ -28,13 +47,15 @@ export default function Product(){
      return(
         <div className="product-container">
             <div className="product">
-                <h3>{product.length !== 0  ? product[idProduct].name : "nao carregou"}</h3>
-                <img src={product.length!== 0 ? product[idProduct].image : "nao carregou"} alt={product.length !== 0 ? product[idProduct].name : "nao carregou"}/>
+                <img src={arrProduct.length!== 0 ? arrProduct[idProduct].image : "nao carregou"} alt={arrProduct.length !== 0 ? arrProduct[idProduct].name : "nao carregou"}/>
             </div>
             <div className="product-description">
-                <h4>Descrição</h4>
-                <p>{product.length !== 0 ? product[idProduct].description : "nao carregou"}</p>
-                <button>Adicionar ao carrinho</button>
+                <h4>{arrProduct.length !== 0  ? arrProduct[idProduct].name : "nao carregou"}</h4>
+                <p>{arrProduct.length !== 0 ? arrProduct[idProduct].description : "nao carregou"}</p>
+                <div className="buttons">
+                    <button onClick={ salvaProduto }>Lista de desejos <FaHeart size={15}/></button>
+                    <button>Adicionar ao carrinho</button>
+                </div>
             </div>
         </div>
     )

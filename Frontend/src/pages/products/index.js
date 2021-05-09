@@ -20,7 +20,7 @@ export default function Products() {
         return;
       }
       setProduto(response.data);
-      const finishedTimeout = setTimeout(() => {
+      setTimeout(() => {
         setLoading(false);
     }, 500)
     }
@@ -80,7 +80,7 @@ export default function Products() {
         <div className="product-stock">
           {produto.map((product, index) => {
             return (
-              <div className="content-associated">
+              <div className="content-associated" key={product.id}>
                 <div className="product-logo">
                   <img
                     className="logo-associated"

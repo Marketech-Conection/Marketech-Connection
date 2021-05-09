@@ -17,7 +17,7 @@ function Header(){
                     <div className="input">
                         <input type="search" placeholder="Pesquise o que quiser"/>
                     </div>
-                    <li><Link href="/"><FaHeart/></Link></li>
+                    <li><Link to="/salvos"><FaHeart/></Link></li>
                     <li><Link href="/"><FaUser/></Link></li>
                     <li><Link to={`/Carrinho`}><FaShoppingCart/></Link></li>
                 </ul>

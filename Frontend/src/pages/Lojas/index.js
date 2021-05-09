@@ -13,7 +13,7 @@ export default function Lojas(){
             //https://api-marketech-connection.herokuapp.com/api/shop
             const response = await api.get('api/shop/product');
             setAssociadosProdutos(response.data)
-            const finishedTimeout = setTimeout(() => {
+            setTimeout(() => {
                 setLoading(false);
             }, 1000)
         }   

@@ -12,7 +12,7 @@ export default function Servicos(){
         async function loadServices(){
             const response = await api.get('api/shop/service');
             setServicos(response.data);
-            const finishedTimeout = setTimeout(() => {
+            setTimeout(() => {
                 setLoading(false);
             }, 500)
         }

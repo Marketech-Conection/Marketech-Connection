@@ -43,8 +43,9 @@
 }
 .product-description button{
     margin-top: 35px;
+    margin-right: 32px;
     background: #BA3639;
-    padding: 10px 25px;
+    padding: 10px 15px;
     font-size: 16px;
     color: #fff;
     border: none;
@@ -54,6 +55,10 @@
 }
 .product-description button:hover{
     filter: brightness(0.9);
+}
+.buttons > button{
+    text-align: center;
+    margin-left: 32px;   
 }
 #loading{
     width: 100px;
