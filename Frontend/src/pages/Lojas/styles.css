@@ -10,6 +10,16 @@ body{
     padding: 32px;
     width: 100%;
 }
+.registered-stores{
+    display: flex;
+    align-items: center;
+}
+.registered-stores h1{
+    color: #FAC018;
+    text-shadow: 0px 3px 6px #043832;
+    font-weight: 600;
+    font-size: 32px;
+}
 .content-store{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

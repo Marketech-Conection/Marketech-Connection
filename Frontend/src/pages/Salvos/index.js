@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import './styles.css'
 import { toast } from 'react-toastify'
+import { FaTrash } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
+import sadImage from '../../assets/undraw_feeling_blue_4b7q.svg'
 export default function SavedProducts(){
     const [addedProduct, setAddedProduct] = useState([]);
 
@@ -22,6 +25,15 @@ export default function SavedProducts(){
     return(
         <div id="my-products">
             <h1>Lista de desejos</h1>
+            {addedProduct.length === 0 && 
+                <div className="no-products">
+                    <img src={sadImage} alt="wishlist"/>
+                    <span>Você não possui itens na sua Lista de desejos</span>
+                    <Link to="/">
+                        Explorar
+                    </Link>
+                </div>
+            }
             <ul>
                 {addedProduct.map((item) => {
                     return(
@@ -31,7 +43,7 @@ export default function SavedProducts(){
                                 <span>{item.name}</span>
                             </div>
                             <div>
-                                <button onClick={ () => handleDelete(item.id) }>Excluir</button>
+                                <button onClick={ () => handleDelete(item.id) }><FaTrash color="#fff" size={20}/></button>
                             </div>
                         </li>
                     )
