@@ -30,7 +30,10 @@ export default function Lojas(){
 
     return(
         <div className="container-store">
-            <img src={logoAje} alt="logo-aje"/>
+            <div className="registered-stores">
+                <img src={logoAje} alt="logo-aje"/>
+                <h1>Lojas cadastradas</h1>
+            </div>
             <div className="content-store">
                 {associadosProdutos.map((index) => {
                 return(

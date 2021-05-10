@@ -26,7 +26,7 @@ export default function Product(){
 
         let savedProducts = JSON.parse(myList) || [];
 
-        const hasProduct = savedProducts.some( (pd, index) => pd.id === arrProduct[idProduct].id )
+        const hasProduct = savedProducts.some( (pd) => pd.id === arrProduct[idProduct].id )
         console.log(hasProduct)
         if(hasProduct){
             toast.info("Você já possui esse produto salvo")
@@ -50,7 +50,7 @@ export default function Product(){
                 <img src={arrProduct.length!== 0 ? arrProduct[idProduct].image : "nao carregou"} alt={arrProduct.length !== 0 ? arrProduct[idProduct].name : "nao carregou"}/>
             </div>
             <div className="product-description">
-                <h4>{arrProduct.length !== 0  ? arrProduct[idProduct].name : "nao carregou"}</h4>
+                <h4>{arrProduct.length !== 0  ? arrProduct[idProduct].name : "nao carregou"} - R$ {arrProduct.length !== 0 ? arrProduct[idProduct].price : "nao carregou"}</h4>
                 <p>{arrProduct.length !== 0 ? arrProduct[idProduct].description : "nao carregou"}</p>
                 <div className="buttons">
                     <button onClick={ salvaProduto }>Lista de desejos <FaHeart size={15}/></button>
