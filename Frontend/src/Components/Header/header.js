@@ -1,9 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import '../../styles/header.css'
 import { FaUser, FaHeart, FaShoppingCart } from 'react-icons/fa'
 
 function Header(){
+    const addToCartSize = useSelector(state => state.addToCar)
     return(
         <header>
             <div className="logo">
@@ -22,7 +24,7 @@ function Header(){
                     <li>
                         <Link to='/Carrinho'>
                             <div className="num-products">
-                                <p className="shop-icon"><FaShoppingCart/><span>0</span></p>
+                                <p className="shop-icon"><FaShoppingCart/><span>{addToCartSize.length}</span></p>
                             </div>
                         </Link>
                     </li>

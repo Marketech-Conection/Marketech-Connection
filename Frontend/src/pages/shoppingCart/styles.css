@@ -24,6 +24,7 @@
     padding: 32px 18px;
     text-align: center;
     position: relative;
+    margin-bottom: 32px;
 }
 .content-car input{
     border: 1px solid #eee;
@@ -37,12 +38,13 @@
 .product-image, .product-name, .product-price {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 .product-image img{
     width: 100px;
     height: 100px;
+    border-radius: 8px;
 }
 .product-inc-dec{
     display: flex;
@@ -52,19 +54,14 @@
 }
 .product-inc-dec button{
     cursor: pointer;
-    padding: 5px 20px;
+    padding: 5px 10px;
     border: 0;
-    margin-top: 18px;
-}
-.product-inc-dec button:nth-child(2){
-    background: #BA3639;
-    color: white;
+    margin: 18px 6px;
+    transition: 0.5s all;
     border-radius: 8px;
 }
-.product-inc-dec button:nth-child(4){
-    background: #088F00;
-    color: white;
-    border-radius: 8px;
+.product-inc-dec button:hover{
+    filter: brightness(0.8);
 }
 .delete-button{
     position: absolute;
@@ -86,4 +83,9 @@
 }
 .procede-button button:hover{
     opacity: 0.8;
+}
+.no-products-image{
+    width: 50px;
+    height: 50px;
+    margin-top: 22px;
 }

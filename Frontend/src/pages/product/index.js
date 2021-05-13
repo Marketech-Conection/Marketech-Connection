@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import './style.css'
 import api from '../../services/api'
 import { useParams } from 'react-router-dom'
@@ -6,6 +7,7 @@ import { FaHeart } from 'react-icons/fa'
 import { toast } from 'react-toastify';
 
 export default function Product(){
+    const dispatch = useDispatch();
     const { idProduct, idShop } = useParams();
     const [arrProduct, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -44,6 +46,15 @@ export default function Product(){
             </div>
         )
     }
+    function handleAdd(){
+        dispatch({
+            type: 'ADD_TO_CART',
+            product: arrProduct[idProduct],
+        });
+        if(handleAdd){
+            toast.success("Produto adicionado ao carrinho")
+        }
+    }
      return(
         <div className="product-container">
             <div className="product">
@@ -54,7 +65,7 @@ export default function Product(){
                 <p>{arrProduct.length !== 0 ? arrProduct[idProduct].description : "nao carregou"}</p>
                 <div className="buttons">
                     <button onClick={ salvaProduto }>Lista de desejos <FaHeart size={15}/></button>
-                    <button>Adicionar ao carrinho</button>
+                    <button onClick={ handleAdd }>Adicionar ao carrinho</button>
                 </div>
             </div>
         </div>
