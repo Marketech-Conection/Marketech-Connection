@@ -25,6 +25,7 @@
     height: 350px;
     margin: 32px 64px;
     background-color: #fff;
+    border-radius: 10px;
 }
 .product-description{
     display: flex;
