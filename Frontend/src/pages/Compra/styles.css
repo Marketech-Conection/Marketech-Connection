@@ -1,0 +1,18 @@
+.purcharse-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 0;
+}
+.purcharse-container img{
+    width: 200px;
+    height: 200px;
+}
+.purcharse-container h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

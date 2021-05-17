@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { removeToCar, updateAmountCar } from '../../store/modules/addToCar/actions'
 import "./styles.css";
 import emptyCart from '../../assets/undraw_empty_cart_co35.svg'
 import { FaTrash, FaPlus, FaMinus } from "react-icons/fa";
@@ -8,17 +9,21 @@ import { toast } from "react-toastify";
 
 
 export default function ShoppingCart() {
+
   const shoppingCartProducts = useSelector((state) => state.addToCar);
   const dispatch = useDispatch();
 
   function handleRemove(id){
-    dispatch({
-      type: 'REMOVE_PRODUCT',
-      id
-    })
+    dispatch(removeToCar(id))
     if(handleRemove){
       toast.info("Produto removido");
     }
+  }
+  function decrementAmount(product){
+    dispatch(updateAmountCar(product.id, product.amount - 1))
+  }
+  function incrementAmount(product){
+    dispatch(updateAmountCar(product.id, product.amount + 1))
   }
 
   return (
@@ -36,7 +41,7 @@ export default function ShoppingCart() {
       }
       {shoppingCartProducts.map((content) => {
         return (
-          <div className="content-car">
+          <div className="content-car" key={content.id}>
             <div className="product-image">
               <strong>Produto</strong>
               <img src={content.image} alt={content.name} />
@@ -53,10 +58,10 @@ export default function ShoppingCart() {
               <strong>Quantidade</strong>
               <input type="text" value={content.amount} readOnly />
               <div className="product-buttons">
-              <button>
+              <button onClick={ () => decrementAmount(content)}>
                 <FaMinus size={15}></FaMinus>
               </button>
-              <button>
+              <button onClick={ () => incrementAmount(content)}>
                 <FaPlus size={15}></FaPlus>
               </button>
               </div>
@@ -68,7 +73,7 @@ export default function ShoppingCart() {
         );
       })}
       <div className="procede-button">
-        <button>Continuar</button>
+        {shoppingCartProducts.length === 0 ? <button disabled={true}>Continuar</button> : <button>Continuar</button>}
       </div>
     </div>
   );

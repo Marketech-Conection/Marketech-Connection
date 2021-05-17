@@ -84,6 +84,10 @@
 .procede-button button:hover{
     opacity: 0.8;
 }
+.procede-button button:disabled{
+    opacity: 0.3;
+    cursor: not-allowed;
+}
 .no-products-image{
     width: 50px;
     height: 50px;

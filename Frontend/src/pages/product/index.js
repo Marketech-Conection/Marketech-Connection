@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import './style.css'
+import { addToCar } from '../../store/modules/addToCar/actions'
 import api from '../../services/api'
 import { useParams } from 'react-router-dom'
 import { FaHeart } from 'react-icons/fa'
@@ -47,10 +48,7 @@ export default function Product(){
         )
     }
     function handleAdd(){
-        dispatch({
-            type: 'ADD_TO_CART',
-            product: arrProduct[idProduct],
-        });
+        dispatch( addToCar(arrProduct[idProduct]));
         if(handleAdd){
             toast.success("Produto adicionado ao carrinho")
         }

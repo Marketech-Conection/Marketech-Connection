@@ -9,6 +9,7 @@ import Servicos from './pages/Serviços'
 import ServicosWeb from './pages/serviçosDaPagina'
 import Erro from './pages/Erro'
 import Salvos from './pages/Salvos'
+import Compra from './pages/Compra'
 
 const Routes = () => {
     return(
@@ -23,6 +24,7 @@ const Routes = () => {
                 <Route exact path="/lojas/:id" component={Produtos}/>
                 <Route exact path="/lojas/:idShop/:idProduct" component={Produto}/>
                 <Route exact path="/salvos" component={Salvos}/>
+                <Route exact path="/compra" component={Compra}/>
                 <Route path="*" component={Erro}/>
             </Switch>
         </BrowserRouter>
