@@ -52,7 +52,7 @@ export default function ShoppingCart() {
             </div>
             <div className="product-price">
               <strong>Preço</strong>
-              <p>R$ {content.price}</p>
+              <p>R$ {content.price},00</p>
             </div>
             <div className="product-inc-dec">
               <strong>Quantidade</strong>
@@ -72,8 +72,13 @@ export default function ShoppingCart() {
           </div>
         );
       })}
+      <div>
+          {shoppingCartProducts.length === 0 ? <h3 style={{display: 'none'}}>Total: R$ 15,00</h3> : <h3>Total: R$ 15,00</h3>}
+      </div>
       <div className="procede-button">
+        <Link to="/confirmacao">
         {shoppingCartProducts.length === 0 ? <button disabled={true}>Continuar</button> : <button>Continuar</button>}
+        </Link>
       </div>
     </div>
   );
