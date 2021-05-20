@@ -7,7 +7,7 @@ Nosso objetivo é desenvolver um market place para os associados da aje pará ( 
 
     * Colocar os produtos e serviços da aje em um só lugar.
     * Fazer contato entre cliente e associado.
-    * Realizar a compra de produtos.
+    * Simular a compra de produtos.
     * Redirecionar para o atendimento de serviços.
 
 ## Tecnologias utilizadas
