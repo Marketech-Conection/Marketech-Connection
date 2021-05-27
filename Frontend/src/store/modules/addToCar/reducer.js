@@ -27,6 +27,9 @@ export default function addToCar(state = [], action){
                 if(action.amount <= 0){
                     return state
                 }
+                if(action.amount === 5){
+                    return state
+                }
                 return produce(state, draft => {
                 const productIndex = draft.findIndex(product => product.id === action.id); 
                 if(productIndex >= 0){
@@ -34,6 +37,13 @@ export default function addToCar(state = [], action){
                   }  
                 })
             }
+            case 'CALCULATE_TOTAL':
+                return produce(state, draft => {
+                    const cartValueTotal = draft.findIndex(product => product.id === action.id)
+                    if(cartValueTotal >= 0){
+                        cartValueTotal.reduce((acc, product) => acc + action.amount * product.price, 0)
+                    }
+                })
         default:
             return state;
    }

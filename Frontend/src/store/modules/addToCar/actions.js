@@ -17,3 +17,11 @@ export function updateAmountCar(id, amount){
         amount
     }
 }
+export function calculateTotalCar(id, amount, product){
+    return {
+        type: 'CALCULATE_TOTAL',
+        id,
+        amount,
+        product
+    }
+}
