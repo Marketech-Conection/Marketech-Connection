@@ -19,6 +19,10 @@ export default function Confirmation() {
                 <strong>Nome</strong>
                 <p>{content.name}</p>
               </div>
+              <div className="product-price">
+                <strong>Preço(total)</strong>
+                <p>{"R$ "+content.price * content.amount + ",00"}</p>
+              </div>
               <div className="product-inc-dec">
                 <strong>Quantidade</strong>
                 <input type="text" value={content.amount} readOnly />
@@ -28,10 +32,10 @@ export default function Confirmation() {
         );
       })}
       <div className="procede-purcharse-button">
-              <Link to="/Compra">
-                <button>Finalizar compra</button>
-              </Link>
-            </div>
+          <Link to="/Compra">
+            <button>Finalizar compra</button>
+          </Link>
+        </div>
     </div>
   );
 }
